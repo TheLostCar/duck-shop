@@ -8,6 +8,10 @@ NextAuth handles crendentials authentication.
 MongoDB holds all product and user data.
 Cloudinary stores all product images.
 
+Enter username 'demo' and password 'password' to enter the backend demo.
+
+Visit the [Live Demo](https://duck-shop.vercel.app/).
+
 <br/>
 
 ## Features
