@@ -6,11 +6,11 @@ import { IoSettingsOutline } from 'react-icons/io5'
 import { AiOutlineUser } from 'react-icons/ai';
 
 import { useState, MouseEvent } from "react";
-import Overview from "./Overview/Overview";
+import Overview from "@components/Overview/Overview";
 import Duck, { DuckSchemaType, LeanDuckSchemaType } from "@models/Duck";
 import dbConnect from "lib/dbConnect";
 import { GetServerSideProps, NextPage } from "next";
-import { Callback, LeanDocument } from "mongoose";
+import { LeanDocument } from "mongoose";
 import ListAllDucks from "@components/ListAllDucks";
 import EditDuck from "@components/EditDuck";
 import { useSession } from "next-auth/react";
