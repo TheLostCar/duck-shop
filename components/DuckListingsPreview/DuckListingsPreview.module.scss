@@ -1,0 +1,32 @@
+@use "../../styles/breakpoints.module.scss" as *;
+
+.container {
+    padding-bottom: 10px;
+    background-color: #94daff;
+    box-shadow: var(--shadow-elevation-medium);
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    @include breakpoint(sm) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    @include breakpoint(md) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    @include breakpoint(lg) {
+        padding: 20px 19%;
+    }
+
+    @include breakpoint(xl) {
+        padding: 20px 25%;
+    }
+    > * {
+        flex-shrink: 0;
+    }
+}

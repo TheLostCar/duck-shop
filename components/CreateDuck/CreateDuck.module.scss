@@ -1,0 +1,188 @@
+@use "../../styles/breakpoints.module.scss" as *;
+
+.container {
+    flex-grow: 1;
+    padding: 2%;
+    @include breakpoint(lg) {
+        padding: 5%;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.row {
+    width: 100%;
+}
+.dragAndDropArea {
+    background-color: hsla(0, 100%, 25%, 0.5);
+}
+
+.imagePreviewContainer {
+    display: flex;
+    background-color: darkgray;
+
+    height: 1px;
+    min-height: 300px;
+    max-height: 600px;
+    flex-basis: 100%;
+    overflow-x: auto;
+    div:first-child {
+        outline: 5px solid hsl(177deg, 61%, 73%);
+    }
+}
+
+.fileInput {
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+.fileInputLabel {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    flex-basis: 100%;
+    padding: 10px 0;
+    margin: 10px;
+    text-align: center;
+    border: 2px dashed #b3b3b3;
+
+    position: relative;
+    z-index: 10;
+
+    &:focus-within {
+        outline: 4px solid #b3b3b3;
+        color: #232323;
+        font-weight: bolder;
+        border-color: transparent;
+    }
+    &:hover {
+        background-color: #f3f3f3;
+        font-weight: bold;
+        border-color: black;
+    }
+}
+
+.namePriceDescriptionWrapper {
+    width: auto;
+    @include breakpoint(sm) {
+        width: max(60%, 425px);
+    }
+}
+
+.nameInput,
+.priceInput,
+.descriptionInput,
+.submitButton {
+    &:focus-visible {
+        outline: 5px solid orange;
+    }
+}
+
+.nameInput {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+.priceInput {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+.descriptionInput {
+    padding: 3px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    min-height: 150px;
+    max-height: 400px;
+
+    resize: vertical;
+}
+
+.submitButton {
+    margin-top: 20px;
+    padding: 5px 15px;
+    background-color: skyblue;
+    border-radius: 5px;
+    cursor: pointer;
+    &.transparent {
+        background-color: transparent;
+        cursor: initial;
+    }
+}
+
+.message {
+    min-height: 1.5rem;
+    color: #0005ff;
+    margin-top: 10px;
+    &.isError {
+        color: red;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+.row.noMargin {
+    margin-top: 0px;
+}
+
+.fileInputRow {
+    @extend .row;
+    flex-wrap: wrap;
+}
+.col {
+    margin: 0 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.col.nameColMargin {
+    margin-bottom: 10px;
+}
+
+@keyframes rotate {
+    from {
+        transform: translateY(-50%) translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) translateX(-50%) rotate(720deg);
+    }
+}
+.spinner {
+    &::before {
+        content: "";
+        display: block;
+        margin: auto auto;
+        height: 30%;
+        width: 30%;
+
+        animation: rotate infinite;
+        animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+        animation-duration: 1.5s;
+
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+
+        border-radius: 50%;
+        border: 10px solid;
+
+        border-top-color: black;
+        border-bottom-color: black;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        z-index: -1;
+    }
+}

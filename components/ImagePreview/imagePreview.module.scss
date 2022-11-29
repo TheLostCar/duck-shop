@@ -1,0 +1,81 @@
+.imagePreviewWrapper {
+    position: relative;
+    flex-shrink: 0;
+    margin: 4px 0px;
+    margin-right: 5px;
+    background-color: white;
+
+    &:first-child {
+        margin-left: 5px;
+    }
+
+    .deleteImage,
+    .imageToLeft,
+    .imageToRight {
+        position: absolute;
+        opacity: 0;
+
+        &:focus-visible {
+            outline: 5px solid orange;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &:hover,
+    &:focus-within {
+        .deleteImage,
+        .imageToLeft,
+        .imageToRight {
+            position: absolute;
+            opacity: 1;
+        }
+    }
+    .deleteImage {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        &:hover {
+            svg {
+                fill: red;
+            }
+        }
+    }
+    .thumbnailStar {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        fill: hsl(177deg, 61%, 73%);
+        stroke: hsl(177deg, 61%, 33%);
+        stroke: black;
+    }
+
+    .arrow {
+        &:hover {
+            svg {
+                fill: blue;
+            }
+        }
+    }
+
+    .imageToRight {
+        @extend .arrow;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+    }
+
+    .imageToLeft {
+        @extend .arrow;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+    }
+}
+
+.imagePreview {
+    height: 100%;
+    width: auto;
+}

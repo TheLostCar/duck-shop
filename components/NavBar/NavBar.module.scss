@@ -1,0 +1,108 @@
+@use "../../styles/breakpoints.module.scss" as *;
+.container {
+    background-color: hsl(201 95% 80%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: var(--shadow-elevation-medium);
+    z-index: 10;
+}
+.logoImage {
+    width: auto;
+    height: 60px;
+    padding: 10px;
+    transform: scaleX(-1);
+}
+
+.logoButtonContainer {
+    display: flex;
+    align-items: center;
+    order: 1;
+}
+
+.searchBarContainer {
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px;
+    flex-basis: 100%;
+    order: 4;
+
+    @include breakpoint(md) {
+        order: 2;
+        flex-basis: 0;
+        background: unset;
+        flex-grow: 1;
+        padding: 10px 0;
+    }
+
+    $shadowColor: #629bbc;
+    $shadow-elevation-medium: inset 0.3px 0.5px 0.7px rgba($shadowColor, 0.36),
+        inset 0.8px 1.6px 2px -0.8px rgba($shadowColor, 0.36), inset 2.1px 4.1px 5.2px -1.7px rgba($shadowColor, 0.36),
+        inset 5px 10px 12.6px -2.5px rgba($shadowColor, 0.36);
+    .searchBarWrapper {
+        background-color: black;
+        display: flex;
+        flex: 1;
+        max-width: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #ccedff;
+        box-shadow: $shadow-elevation-medium;
+    }
+
+    .searchBarInput {
+        flex-grow: 0.5;
+        flex-grow: 1;
+        padding: 5px;
+        color: hsl(210deg 35% 42%);
+    }
+
+    .searchButton {
+        padding: 2px;
+        cursor: pointer;
+
+        .searchIcon {
+            filter: drop-shadow(3px 3px 1px rgba($shadowColor, 0.36));
+            fill: hsl(210deg 35% 56%);
+            padding: 2px;
+            &:hover {
+                fill: hsl(224deg 85% 65%);
+            }
+        }
+    }
+}
+
+.navContainer {
+    display: flex;
+    order: 3;
+    $shadowColor: hsl(201deg 52% 49%);
+    $shadow-elevation-medium: inset 0.3px 0.5px 0.7px rgba($shadowColor, 0.36),
+        inset 0.8px 1.6px 2px -0.8px rgba($shadowColor, 0.36), inset 2.1px 4.1px 5.2px -1.7px rgba($shadowColor, 0.36),
+        inset 5px 10px 12.6px -2.5px rgba($shadowColor, 0.36);
+    .navIconContainer {
+        display: inline-flex;
+        width: 50px;
+        padding: 10px 0;
+
+        .navIcon {
+            display: block;
+
+            stroke: hsl(210deg 45% 30%);
+            fill: hsl(210deg 45% 30%);
+
+            height: 30px;
+            width: 30px;
+            margin: auto auto;
+            filter: drop-shadow(3px 3px 2px $shadowColor);
+        }
+
+        &:hover {
+            box-shadow: $shadow-elevation-medium;
+            .navIcon {
+                fill: hsl(210deg 35% 40%);
+                stroke: hsl(210deg 35% 40%);
+                filter: none;
+            }
+        }
+    }
+}

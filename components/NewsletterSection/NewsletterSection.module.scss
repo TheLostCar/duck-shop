@@ -1,0 +1,68 @@
+@use "../../styles/breakpoints.module.scss" as *;
+
+.newsletterSection {
+    padding: 10px 0;
+    @include breakpoint(md) {
+        padding: 20px 10%;
+    }
+
+    @include breakpoint(lg) {
+        padding: 20px 19%;
+    }
+
+    @include breakpoint(xl) {
+        padding: 20px 25%;
+    }
+
+    > * {
+        flex-shrink: 0;
+    }
+    .newsletterForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletterHeader {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .newsletterText {
+        text-align: center;
+        padding: 10px 25px;
+    }
+
+    .newsletterEmailWrapper {
+        position: static;
+    }
+
+    .newsletterEmail {
+        width: 85%;
+        max-width: 500px;
+        background-color: hsl(45deg 100% 95%);
+        padding: 5px 15px;
+        border-radius: 5px;
+        box-shadow: var(--shadow-elevation-medium);
+    }
+
+    .newsletterSubmit {
+        border-radius: 5px;
+        padding: 5px 50px;
+        margin: 10px 0;
+        background-color: #94b3fd;
+        background-color: hsl(45deg 100% 95%);
+        box-shadow: var(--shadow-elevation-medium);
+    }
+
+    .hiddenLabel {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+}

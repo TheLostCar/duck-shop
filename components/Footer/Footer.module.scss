@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    padding-top: 2rem;
+    background-color: hsl(200deg 100% 95%);
+    color: hsl(245deg 10% 30%);
+    justify-content: space-evenly;
+
+    ul {
+        list-style: none;
+    }
+
+    .socials {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+        li {
+            margin: 0 10px;
+        }
+        svg {
+            fill: hsl(201deg 25% 70%);
+            &.active {
+                fill: black;
+            }
+        }
+    }
+}

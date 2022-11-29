@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        margin-bottom: 30px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        border: 1px solid #c3c3c3;
+        border-radius: 5px;
+        margin: 2px 0 15px 0;
+        box-shadow: inset 0 0.1rem 0.2rem rgb(0 0 0 / 20%);
+        padding: 0.5rem 1rem;
+    }
+
+    .submitButton {
+        text-align: center;
+        padding: 4px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #c3c3c3;
+        margin-top: 15px;
+        box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.15), inset 0 0.1rem 0.2rem var(white),
+            inset 0 -0.1rem 0.1rem rgba(0, 0, 0, 0.05);
+        transition: background-color 0.2s ease;
+        &:active {
+            background-color: #f9f9f9;
+        }
+    }
+}
+
+.message {
+    min-height: 1.5rem;
+    color: #0005ff;
+    margin-top: 10px;
+    &.isError {
+        color: red;
+    }
+}

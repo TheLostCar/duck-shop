@@ -1,0 +1,133 @@
+@use "./breakpoints.module.scss" as *;
+.container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.returnLink {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    span {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            color: #99feff;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    position: relative;
+    z-index: 100;
+    height: 60px;
+    box-shadow: var(--shadow-elevation-medium-be);
+    align-items: center;
+    padding: 0 20px;
+    .marginLeftAuto {
+        margin-left: auto;
+    }
+    button:focus-within {
+        svg {
+            outline: 1px solid black;
+        }
+    }
+    button:hover {
+        cursor: pointer;
+    }
+
+    button {
+        margin-left: 10px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    button.hamburger:hover {
+        background-color: transparent;
+        svg {
+            fill: #424242;
+        }
+    }
+
+    button:hover {
+        background-color: #f5f5f5;
+    }
+
+    path.fill {
+        fill: #3d3d3d;
+    }
+    path.stroke {
+        stroke: #3d3d3d;
+    }
+}
+
+.mainWrapper {
+    display: flex;
+    flex-grow: 1;
+    height: calc(100% - 60px);
+}
+
+.sidebar {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    box-shadow: var(--shadow-elevation-medium-be);
+    z-index: 10;
+    @include breakpoint(sm) {
+        position: relative;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border: 0px solid #c3c3c3;
+        border-bottom-width: 1px;
+        width: 120px;
+        aspect-ratio: 12 / 11;
+        button {
+            height: 100%;
+        }
+    }
+    button:hover {
+        background-color: #f5f5f5;
+        color: hsl(240, 100%, 34%);
+        cursor: pointer;
+    }
+    button.active {
+        background-color: #f5f5f5;
+    }
+
+    button:focus-within {
+        outline: double;
+    }
+}
+
+.sidebar.closed {
+    margin-right: -120px;
+    transform: translateX(-100%);
+}
+
+.noDuckSelected {
+    flex-grow: 1;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6f6f6f;
+    text-align: center;
+    font-size: 30px;
+
+    @include breakpoint(lg) {
+        padding: 5%;
+    }
+}

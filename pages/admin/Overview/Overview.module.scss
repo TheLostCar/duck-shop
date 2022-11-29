@@ -1,0 +1,59 @@
+@use "../../../styles/breakpoints.module.scss" as *;
+
+.contentWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 2%;
+    @include breakpoint(lg) {
+        padding: 5%;
+    }
+    section {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include breakpoint(lg) {
+            flex-basis: 50%;
+        }
+    }
+
+    .sectionWrapper {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sectionContent {
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow: var(--shadow-elevation-low);
+        flex-grow: 1;
+        width: 100%;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        justify-content: center;
+    }
+    .sectionText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 100%;
+        @include breakpoint(lg) {
+            width: 200px;
+            flex-basis: auto;
+        }
+    }
+}
+
+.imageWrapper {
+    display: flex;
+    aspect-ratio: 1 / 1;
+    width: 200px;
+    align-items: center;
+}

@@ -1,0 +1,99 @@
+@use "./breakpoints.module.scss" as *;
+
+.main {
+    min-height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: hsl(201, 95%, 75%);
+}
+
+.exploreBackendLink {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    span {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            color: #99feff;
+        }
+    }
+}
+
+.scrollButtons {
+    padding: 10px 40px;
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 9999px;
+    background-color: #f1f1c1;
+}
+
+.separator {
+    text-align: center;
+    background-color: #99feff;
+    padding: 5px 0;
+}
+
+.hiddenLabel {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.carousel {
+    max-height: 500px;
+    max-width: 500px;
+    align-self: center;
+    margin: 20px 0;
+    aspect-ratio: 3 / 1;
+    transition: max-width 0.5s;
+
+    @include breakpoint(sm) {
+        // max-width: 600px;
+    }
+
+    @include breakpoint(md) {
+        max-width: 700px;
+    }
+    @include breakpoint(lg) {
+        max-width: 900px;
+    }
+}
+
+.welcomeSection {
+    padding: 10px 25px;
+    text-align: center;
+
+    @include breakpoint(md) {
+        padding: 20px 10%;
+    }
+
+    @include breakpoint(lg) {
+        padding: 20px 19%;
+    }
+
+    @include breakpoint(xl) {
+        padding: 20px 25%;
+    }
+
+    > * {
+        flex-shrink: 0;
+    }
+
+    h2 {
+        text-align: center;
+        padding: 10px 0;
+    }
+    div {
+        padding: 10px 0;
+    }
+}
