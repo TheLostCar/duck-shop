@@ -12,7 +12,7 @@ import Footer from '@components/Footer'
 import { IoMdArrowDropright } from 'react-icons/io'
 
 import NewsletterSection from '@components/NewsletterSection'
-import styles from '../styles/Home.module.scss'
+import styles from '@styles/Home.module.scss'
 
 type Props = {
     listings: (LeanDocument<DuckSchemaType> & {

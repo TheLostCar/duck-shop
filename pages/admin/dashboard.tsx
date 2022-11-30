@@ -1,5 +1,5 @@
 import CreateDuck from "@components/CreateDuck";
-import styles from '../../styles/dashboard.module.scss'
+import styles from '@styles/dashboard.module.scss'
 import { VscMenu } from 'react-icons/vsc'
 import { IoMdArrowDropright, IoMdNotificationsOutline } from 'react-icons/io'
 import { IoSettingsOutline } from 'react-icons/io5'

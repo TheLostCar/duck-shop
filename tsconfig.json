@@ -7,7 +7,7 @@
       "@pages/*": ["pages/*"],
       "@models/*": ["models/*"],
       "@lib/*": ["lib/*"],
-      "@styles/*": ["styles/"]
+      "@styles/*": ["styles/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

@@ -1,4 +1,4 @@
-@use "../../styles/breakpoints.module.scss" as *;
+@use "~@styles/breakpoints.module.scss" as *;
 .container {
     background-color: hsl(201 95% 80%);
     display: flex;

@@ -2,7 +2,7 @@ import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { signIn, getSession, getCsrfToken } from "next-auth/react";
 import { useState } from "react";
 import { useRouter } from 'next/router'
-import styles from '../../styles/SignInPage.module.scss';
+import styles from '@styles/SignInPage.module.scss';
 import { getToken } from "next-auth/jwt";
 import useMessage from "@hooks/useMessage";
 

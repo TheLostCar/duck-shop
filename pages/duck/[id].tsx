@@ -8,7 +8,7 @@ import Footer from '@components/Footer';
 import Image from 'next/future/image';
 import { useState } from 'react';
 
-import styles from '../../styles/DuckPage.module.scss'
+import styles from '@styles/DuckPage.module.scss'
 import DuckListingsPreview from "@components/DuckListingsPreview";
 import CloudinaryImage from "@components/CloudinaryImage";
 

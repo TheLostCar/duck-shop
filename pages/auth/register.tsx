@@ -2,7 +2,7 @@ import useMessage from '@hooks/useMessage';
 import { GetServerSideProps } from 'next';
 import { getSession } from 'next-auth/react';
 import { useState } from 'react';
-import styles from '../../styles/RegisterPage.module.scss';
+import styles from '@styles/RegisterPage.module.scss';
 
 const Register = () => {
     const [password, setPassword] = useState('');
