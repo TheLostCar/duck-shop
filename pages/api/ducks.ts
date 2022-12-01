@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import Duck, { DuckSchemaType } from '../../models/Duck';
-import dbConnect from '../../lib/dbConnect';
+import Duck, { DuckSchemaType } from '@models/Duck';
+import dbConnect from '@lib/dbConnect';
 import { LeanDocument } from 'mongoose';
 
 type Data = {

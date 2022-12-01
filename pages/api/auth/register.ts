@@ -1,4 +1,4 @@
-import dbConnect from '../../../lib/dbConnect';
+import dbConnect from '@lib/dbConnect';
 import { HydratedDocument, LeanDocument } from 'mongoose';
 import { NextApiRequest, NextApiResponse } from 'next';
 import User, { UserSchemaType } from '@models/User';

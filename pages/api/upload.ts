@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse, PageConfig } from 'next';
-import Duck, { DuckSchemaType } from '../../models/Duck';
-import dbConnect from '../../lib/dbConnect';
+import Duck, { DuckSchemaType } from '@models/Duck';
+import dbConnect from '@lib/dbConnect';
 import { v2 as cloudinary } from 'cloudinary';
 import formidable from 'formidable';
 import { HydratedDocument, Model } from 'mongoose';

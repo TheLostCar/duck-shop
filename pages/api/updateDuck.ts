@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse, PageConfig } from 'next'
-import Duck, { DuckSchemaType, LeanDuckSchemaType } from '../../models/Duck';
-import dbConnect from '../../lib/dbConnect';
+import Duck, { DuckSchemaType, LeanDuckSchemaType } from '@models/Duck';
+import dbConnect from '@lib/dbConnect';
 import mongoose, { LeanDocument, Query } from 'mongoose';
 import formidable from 'formidable';
 import { getToken } from 'next-auth/jwt';

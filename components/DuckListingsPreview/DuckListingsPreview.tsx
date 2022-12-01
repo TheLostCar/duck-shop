@@ -1,6 +1,6 @@
 import { LeanDocument } from "mongoose";
-import { DuckSchemaType } from "../../models/Duck";
-import DuckListing from "../DuckListing/DuckListing";
+import { DuckSchemaType } from "@models/Duck";
+import DuckListing from "../DuckListing";
 import styles from './DuckListingsPreview.module.scss'
 
 type Props = {
